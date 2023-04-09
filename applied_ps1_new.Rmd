@@ -49,7 +49,7 @@ Late coins used this pset: 0. Late coins left: 4. <!--You may use one for a give
 
 1.1.1
 ```{r}
-setwd("/Users/rabailsofi/Desktop/Grad School /Q3, 2023/Data & Programming in R/Week 3/CSVs")
+setwd("/Users/rabailsofi/Desktop")
 
 ```
 
@@ -62,13 +62,16 @@ setwd("/Users/rabailsofi/Desktop/Grad School /Q3, 2023/Data & Programming in R/W
 
 1.1.3
 ```{r}
-download.file("https://github.com/datasci-harris/Applied-PS1-Data-Files/blob/main/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip", destfile = "rabailsofi/Desktop/data/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip")
+download.file("https://github.com/datasci-harris/Applied-PS1-Data-Files/blob/main/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip", destfile = "rabailsofi/Desktop/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip")
 ```
 
 
 1.1.4
 ```{r}
-system.time(download.file("https://github.com/datasci-harris/Applied-PS1-Data-Files/blob/main/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip", destfile = "rabailsofi/Desktop/data/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip"))
+setwd("/Users/rabailsofi/Desktop")
+
+
+download.file("https://github.com/datasci-harris/Applied-PS1-Data-Files/blob/main/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.zip", destfile = "/Users/rabailsofi/Desktop/data/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1 (4).zip")
 ```
 
 1.1.5 
@@ -76,7 +79,7 @@ system.time(download.file("https://github.com/datasci-harris/Applied-PS1-Data-Fi
 
 website <- "https://github.com/datasci-harris/Applied-PS1-Data-Files/blob/main/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_" 
                             
-path <- str_c("/Users/rabailsofi/Desktop/data",".zip") 
+path <- str_c("/Users/rabailsofi/Desktop/data",".zip")  
   
 files <- str_c(1:12, ".zip")
 
@@ -85,8 +88,8 @@ download.file(url = str_c(website, files), destfile = str_c(path, files))
 ```
 
 1.1.6 
-```{r}
-setwd("~/Desktop")
+```{r eval = FALSE, cache = TRUE}
+setwd("/Users/rabailsofi/Desktop")
 
 flights1 <- read.csv("On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_1.csv")
 flights2 <- read.csv("On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2016_2.csv") 
@@ -135,7 +138,8 @@ allflightsdata <- bind_rows(flights1, flights2, flights3, flights4, flights5, fl
 ```
 
 1.1.8
-```{r}
+```{r eval = FALSE, cache = TRUE}
+setwd("/Users/rabailsofi/Desktop")
 read_csv("allflightsdata.csv")
 ```
 
